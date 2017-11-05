@@ -12,4 +12,5 @@ class User < ApplicationRecord
     :case_sensitive => false
   }
 
+  has_many :topics
 end
