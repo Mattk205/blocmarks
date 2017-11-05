@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-   @topic = current_user.topics.build(topic_params)
+   @topic = Topic.new(topic_params)
    @topic.user = current_user
 
     if @topic.save

@@ -12,7 +12,7 @@ class BookmarksController < ApplicationController
       @topic = Topic.find(params[:topic_id])
       @bookmark = @topic.bookmarks.build(bookmark_params)
       @bookmark.user = current_user
-
+      
       if @bookmark.save
         flash[:notice] = "Post was saved."
         redirect_to [@topic, @bookmark]
